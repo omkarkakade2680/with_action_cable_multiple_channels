@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<section id="rooms" data-channel="rooms" data-room-id="<%= @room.name %>"></section>
 <p>
   <strong>Name:</strong>
   <%= @room.name %>
@@ -12,6 +12,3 @@
   <%= f.submit %>
 <% end %>
 <div id="msg"></div>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>

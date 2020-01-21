@@ -1,10 +1,8 @@
 class RoomChannel < ApplicationCable::Channel
-  def subscribed
-    # stream_from "room_channel"
-    stream_from "room_#{params[:room]}"
+  def follow(data)
+    stream_from "room_#{data['room_id']}"
   end
 
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
+  def unfollow(data)
   end
 end
